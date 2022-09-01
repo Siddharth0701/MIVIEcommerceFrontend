@@ -7,7 +7,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CategoryService {
-  ApiUrl="https://localhost:5001/api/"
+ // ApiUrl="https://localhost:5001/api/"
+ ApiUrl="https://localhost:44303/api/"
 
   constructor( private httpClient: HttpClient) { }
   addCategory(category:ICategory){
@@ -19,7 +20,7 @@ export class CategoryService {
    }
 
    getAllCategory(){
-   return this.httpClient.get<ICategory[]>(this.ApiUrl+"/Category",{
+   return this.httpClient.get<ICategory[]>(this.ApiUrl+"Category",{
       headers:{
         "Access-Control-Allow-Origin":"*"
       }
