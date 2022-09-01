@@ -1,7 +1,18 @@
 <p>Sub category List</p>
+<label  class="class-col-md-2" for="Category">Category</label>
 
-<div *ngFor="let subcategory of subcategorys">
+
+  <div class="class-md-10">
+      <select name="Category" class="form-control">
+        <option value="">Select...</option>
+        <option *ngFor="let subcategory of subcategorys">
+          {{subcategory.name}}
+        </option>
+      </select>
+  </div>
+
+<!-- <div *ngFor="let subcategory of subcategorys">
     <p>
         {{subcategory.name}}
     </p>
-</div>
+</div> -->
